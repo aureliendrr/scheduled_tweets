@@ -18,4 +18,12 @@ Rails.application.routes.draw do
 
   get "password/reset/edit", to: "password_reset#edit"
   patch "password/reset/update", to: "password_reset#update"
+
+  namespace :dashboard do
+    get "home", to: "home#index"
+    resources :prospects
+    resources :follow_ups
+    resources :history
+    resources :settings
+  end
 end

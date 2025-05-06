@@ -61,3 +61,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'faker', '~> 2.0'
+gem 'kaminari'
+
+gem "tailwindcss-ruby", "~> 4.1"
+
+gem "tailwindcss-rails", "~> 4.2"
