@@ -12,10 +12,20 @@
     </ul>
 
     <!-- User Info -->
-    <div class="w-full flex justify-end items-center space-x-4">
-      <a href="/login" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition duration-300">
-        Login
-      </a>
-    </div>
+    <% if Current.user %>
+      <div class="w-full flex justify-end items-center space-x-4">
+        <%= link_to "Welcome, #{Current.user.email}", edit_password_path, class: "text-gray-300 hover:text-gray-100 transition duration-300" %>
+        <%= button_to "Logout", logout_path, method: :delete, class: "cursor-pointer bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition duration-300" %>
+      </div>
+    <% else %>
+      <div class="w-full flex justify-end items-center space-x-4">
+        <a href="/signin" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition duration-300">
+          Login
+        </a>
+        <a href="/signup" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded transition duration-300">
+          Sign Up
+        </a>
+      </div>
+    <% end %>
   </div>
 </nav>
