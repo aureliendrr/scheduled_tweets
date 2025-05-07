@@ -1,0 +1,21 @@
+<div role="dialog" tabindex="-1" aria-labelledby="<%= modal_id %>" id="<%= modal_id %>" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-6 w-full max-w-lg">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-lg font-semibold text-gray-900"><%= title %></h3>
+      <button type="button" class="text-gray-400 hover:text-gray-500" aria-label="Close" data-hs-overlay="#<%= modal_id %>">✕</button>
+    </div>
+
+    <div class="mb-4">
+      <%= yield %>
+    </div>
+
+    <div class="flex justify-end">
+      <button type="button" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 mr-2" data-hs-overlay="#<%= modal_id %>">
+        Cancel
+      </button>
+      <button type="submit" form="<%= form_id %>" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
