@@ -7,6 +7,7 @@ module Dashboard
 
       @prospects = Prospect.all
       @prospects = @prospects.where("name LIKE :q OR email LIKE :q", q: "%#{@query}%") if @query.present?
+      @per_page = params[:per_page] || 10
       @prospects = @prospects.page(params[:page]).per(@per_page)
     end
 

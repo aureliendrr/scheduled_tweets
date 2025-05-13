@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   namespace :dashboard do
     get "home", to: "home#index"
     resources :prospects
+    resources :interactions, only: [ :create ]
     resources :follow_ups
     resources :history
     resources :settings
