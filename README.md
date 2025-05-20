@@ -21,7 +21,7 @@ Fini les tableaux Excel ou les rappels oubliés : tout est centralisé dans une 
 | 🧠 Backend & Front | **Ruby on Rails 8** (monolith complet)     |
 | 🎨 UI/UX           | **TailwindCSS** + **Preline UI**           |
 | ⚡ Interactions    | Hotwire : **Turbo** + **Stimulus**         |
-| 💾 Base de données | **SQLite3** (en dev)                       |
+| 💾 Base de données | **Postgres** (en dev)                      |
 
 ---
 
@@ -31,7 +31,7 @@ Fini les tableaux Excel ou les rappels oubliés : tout est centralisé dans une 
 
 - Ruby (>= 3.2 recommandé)  
 - Bundler (`gem install bundler`)  
-- SQLite3  
+- PostgreSQL  
 - Node.js (pour Preline si jamais du JS est ajouté)  
 - (Facultatif) Yarn si des dépendances JS sont utilisées un jour  
 
