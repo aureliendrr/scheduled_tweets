@@ -62,7 +62,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'faker', '~> 2.0'
+gem 'faker', '~> 3.5'
 gem 'kaminari'
 
 gem "tailwindcss-ruby", "~> 4.1"
